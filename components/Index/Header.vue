@@ -1,8 +1,19 @@
 <template>
-  <div class="video-container">
+  <section class="video-container">
+    <div>
+      <img src="../../assets/logo.png" alt="logo" />
+      <h1 class="title">Nox-Gaming</h1>
+      <h2 class="subtitle">Communauté Francophone Multigaming</h2>
+      <h3>Jouez, partagez, vivez avec des joueurs/joueuses avec les mêmes passions.</h3>
+      <div class="links">
+        <button
+          class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded"
+        >Rejoignez-nous</button>
+      </div>
+    </div>
+
     <figure>
       <video
-        class="video-container__video"
         autoplay="true"
         loop="true"
         muted="true"
@@ -19,13 +30,81 @@
         />
       </video>
     </figure>
-  </div>
+  </section>
 </template>
 
 <script>
 name: 'Header'
-export default {}
 </script>
 
 <style>
+.bg-orange-400 {
+  background-color: theme('colors.accentDarker');
+}
+.bg-orange-500 {
+  background-color: theme('colors.accent');
+}
+.border-orange-700 {
+  background-color: theme('colors.accent');
+}
+.border-orange-500:hover {
+  background-color: blue;
+}
+
+section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  overflow-y: hidden;
+}
+figure {
+  position: absolute;
+  top: 0;
+  z-index: -999;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.8) 100%,
+    transparent 50.1%
+  );
+}
+video {
+  mix-blend-mode: overlay;
+}
+/* Sample `apply` at-rules with Tailwind CSS
+.container {
+  @apply min-h-screen flex justify-center items-center text-center mx-auto;
+}
+*/
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  display: block;
+  font-weight: 300;
+  font-size: 100px;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 42px;
+  word-spacing: 5px;
+  padding-bottom: 15px;
+}
+
+.links {
+  padding-top: 15px;
+}
 </style>
