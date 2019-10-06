@@ -50,4 +50,10 @@ export default {}
 </script>
 
 <style>
+a,
+span {
+  color: white;
+}
+</style>>
+
 </style>

@@ -42,7 +42,15 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/google-analytics'
   ],
+  debug: {
+    enabled: true,
+    sendHitTask: true
+  },
+  googleAnalytics: {
+    id: 'UA-25820434-4'
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
@@ -56,7 +64,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
     }
   }
 }

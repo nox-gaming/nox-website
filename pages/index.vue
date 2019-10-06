@@ -1,9 +1,11 @@
 <template>
-  <Header />
+  <div>
+    <Header />
+  </div>
 </template>
 
 <script>
-import Header from '~/components/Index/Header'
+import Header from '@/components/Index/Header'
 
 export default {
   components: {

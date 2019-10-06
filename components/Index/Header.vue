@@ -1,14 +1,20 @@
 <template>
-  <section class="video-container">
-    <div>
-      <img src="../../assets/logo.png" alt="logo" />
+  <!-- Photo by Florian Olivo on Unsplash -->
+  <section class="video-container bg-tex">
+    <div class="mt-20">
+      <img src="/img/logo.png" alt="logo" />
       <h1 class="title">Nox-Gaming</h1>
       <h2 class="subtitle">Communauté Francophone Multigaming</h2>
       <h3>Jouez, partagez, vivez avec des joueurs/joueuses avec les mêmes passions.</h3>
-      <div class="links">
-        <button
+      <div class="links mt-10">
+        <a
+          href="https://discord.gg/wvPYPk3"
           class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded"
-        >Rejoignez-nous</button>
+        >Rejoignez-nous</a>
+        <a
+          class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded"
+          href="/chart.pdf"
+        >Charte de communauté</a>
       </div>
     </div>
 
@@ -89,14 +95,17 @@ video {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'bigNoodle', 'Quicksand', 'Source Sans Pro', -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
   letter-spacing: 1px;
 }
-
+@font-face {
+  font-family: bigNoodle;
+  src: url('/fonts/BIG_NOODLE_TITLING.TTF');
+}
 .subtitle {
   font-weight: 300;
   font-size: 42px;
@@ -106,5 +115,11 @@ video {
 
 .links {
   padding-top: 15px;
+}
+
+.bg-tex {
+  background-blend-mode: darken;
+  /* background-color: #040109; */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cg fill='%23ed8936' fill-opacity='0.07'%3E%3Cpath fill-rule='evenodd' d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3E%3C/g%3E%3C/svg%3E");
 }
 </style>
