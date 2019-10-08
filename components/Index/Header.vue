@@ -9,10 +9,10 @@
       <div class="links mt-10">
         <a
           href="https://discord.gg/wvPYPk3"
-          class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded"
+          class="bg-accent hover:bg-accent-darker text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded"
         >Rejoignez-nous</a>
         <a
-          class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded"
+          class="bg-accent hover:bg-accent-darker text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded"
           href="/chart.pdf"
         >Charte de communauté</a>
       </div>
@@ -43,32 +43,25 @@
 name: 'Header'
 </script>
 
-<style>
-.bg-orange-400 {
+<style scoped>
+.bg-accent-darker {
   background-color: theme('colors.accentDarker');
 }
-.bg-orange-500 {
+.bg-accent {
   background-color: theme('colors.accent');
-}
-.border-orange-700 {
-  background-color: theme('colors.accent');
-}
-.border-orange-500:hover {
-  background-color: blue;
 }
 
 section {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   text-align: center;
   color: white;
   overflow-y: hidden;
 }
 figure {
   position: absolute;
+  overflow: hidden;
+  height: 100vh;
   top: 0;
   z-index: -999;
   background: linear-gradient(
@@ -79,12 +72,9 @@ figure {
 }
 video {
   mix-blend-mode: overlay;
+  object-fit: cover;
 }
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
+
 .container {
   margin: 0 auto;
   min-height: 100vh;
