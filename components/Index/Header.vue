@@ -7,12 +7,12 @@
       <h2 class="subtitle">Communauté Francophone Multigaming</h2>
       <h3>Jouez, partagez, vivez avec des joueurs/joueuses avec les mêmes passions.</h3>
       <div class="links">
-        <nuxt-link
-          to="https://discord.gg/wvPYPk3"
-          class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded"
-        >Rejoignez-nous</nuxt-link>
         <a
-          class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded"
+          href="https://discord.gg/wvPYPk3"
+          class="bg-accent hover:bg-accent-darker text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded"
+        >Rejoignez-nous</a>
+        <a
+          class="bg-accent hover:bg-accent-darker text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded"
           href="/chart.pdf"
         >Charte de communauté</a>
       </div>
@@ -62,18 +62,14 @@ section {
 .bg-orange-400 {
   background-color: theme('colors.accentDarker');
 }
-.bg-orange-500 {
+.bg-accent {
   background-color: theme('colors.accent');
-}
-.border-orange-700 {
-  background-color: theme('colors.accent');
-}
-.border-orange-500:hover {
-  background-color: blue;
 }
 
 figure {
   position: absolute;
+  overflow: hidden;
+  height: 100vh;
   top: 0;
   z-index: -999;
   background: linear-gradient(
@@ -84,6 +80,7 @@ figure {
 }
 video {
   mix-blend-mode: overlay;
+  object-fit: cover;
 }
 
 .title {
