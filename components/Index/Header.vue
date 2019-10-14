@@ -1,16 +1,16 @@
 <template>
   <!-- Photo by Florian Olivo on Unsplash -->
   <section class="video-container bg-tex">
-    <div class="mt-20">
+    <div class="central">
       <img src="/img/logo.png" alt="logo" />
       <h1 class="title">Nox-Gaming</h1>
       <h2 class="subtitle">Communauté Francophone Multigaming</h2>
       <h3>Jouez, partagez, vivez avec des joueurs/joueuses avec les mêmes passions.</h3>
-      <div class="links mt-10">
-        <a
-          href="https://discord.gg/wvPYPk3"
+      <div class="links">
+        <nuxt-link
+          to="https://discord.gg/wvPYPk3"
           class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded"
-        >Rejoignez-nous</a>
+        >Rejoignez-nous</nuxt-link>
         <a
           class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded"
           href="/chart.pdf"
@@ -43,7 +43,22 @@
 name: 'Header'
 </script>
 
-<style>
+<style scoped>
+.central {
+  margin-top: 10em;
+}
+h2 {
+  font-style: italic;
+}
+h3 {
+  padding: 1em;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
 .bg-orange-400 {
   background-color: theme('colors.accentDarker');
 }
@@ -57,16 +72,6 @@ name: 'Header'
   background-color: blue;
 }
 
-section {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  color: white;
-  overflow-y: hidden;
-}
 figure {
   position: absolute;
   top: 0;
@@ -80,19 +85,6 @@ figure {
 video {
   mix-blend-mode: overlay;
 }
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
 .title {
   font-family: 'bigNoodle', 'Quicksand', 'Source Sans Pro', -apple-system,
@@ -102,10 +94,13 @@ video {
   font-size: 100px;
   letter-spacing: 1px;
 }
+
 @font-face {
   font-family: bigNoodle;
+  font-style: italic;
   src: url('/fonts/BIG_NOODLE_TITLING.TTF');
 }
+
 .subtitle {
   font-weight: 300;
   font-size: 42px;
