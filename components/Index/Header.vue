@@ -8,7 +8,7 @@
       <h3>Jouez, partagez, vivez avec des joueurs/joueuses avec les mêmes passions.</h3>
       <div class="links">
         <a
-          href="https://discord.gg/wvPYPk3"
+          href="https://discordapp.com/invite/wvPYPk3"
           class="bg-accent hover:bg-accent-darker text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded"
         >Rejoignez-nous</a>
         <a
